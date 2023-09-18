@@ -91,6 +91,11 @@ nav a:hover {
     padding-bottom: 10px;
 }
 
+.assignments-section h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
 .assignments-section ul {
     padding: 15px;
 }
@@ -112,7 +117,7 @@ footer {
     text-align: center;
     padding: 15px;
     min-height: 70px;
-    margin-top: auto; /* Push the footer to the bottom */
+    margin-top: auto;
 }
 
 footer a {
