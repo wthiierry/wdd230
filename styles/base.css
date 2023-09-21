@@ -1,137 +1,240 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-:root {
-    --primary-color: #011837;
-    --secondary-color: #77bae4;
-    --accent1-color: #fcfcfc;
-    --accent2-color: #011837;
-    --principal-font: "Noto Sans", "Roboto", Arial, Helvetica, sans-serif;
-}
-
-body {
-    background-color: var(--accent1-color);
-    font-family: var(--principal-font);
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-}
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
 
-.container {
-    box-sizing: border-box;
-    margin: 0 auto;
-    max-width: 680px;
-    width: 100%;
-    flex-grow: 1;
-}
-
-.header {
-    box-sizing: border-box;
-    background-color: var(--primary-color);
-    margin: 0;
-    text-align: center;
-    padding: 1.5rem;
-}
-
-.header-content {
+  header {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.header img {
-    width: 20vw;
-    margin-right: 1rem;
-    border-radius: 5px;
-    max-width: 150px;
-}
-
-.header h1 {
-    color: var(--accent1-color);
-    text-align: left;
-    padding: 0.75rem;
-    max-width: 45rem;
-    margin: 0;
-}
-
-nav {
-    background-color: var(--secondary-color);
     text-align: center;
-}
+    padding: 20px 0;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #1a2433;
+  }
+  
+  header img {
+    width: 100px;
+    padding: 10px;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+  
+  header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+  }
 
-nav ul {
+  #menu {
+      display: block;
+      font-size: 2rem;
+      font-weight:700;
+      text-decoration: none;
+      padding: .5rem .75rem;
+      background-color: #eee;
+      color: #000;
+  }
+  
+  #menu::before {
+      content: "≡";
+  }
+  
+  #menu.show::before {
+      content: "X";
+  }
+  
+  nav ul {
+    display: flex;
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    flex-direction: column;
+  }
+  
+  .navigation li {
+    width: 100%;
     text-align: center;
-}
-
-nav li {
-    margin-bottom: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--accent1-color);
-    font-weight: bold;
+  }
+  
+  .navigation a {
     display: block;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.assignments-section {
-    box-sizing: border-box;
-    background-color: var(--secondary-color);
-    color: var(--accent1-color);
-    width: 97.5%;
-    margin: 0 auto;
-    padding: 15px 35px;
-    padding-bottom: 130px;
-}
-
-.assignments-section h2 {
-    margin: 0;
-    border-bottom: 2px solid var(--accent1-color);
-    padding-bottom: 10px;
-}
-
-.assignments-section h3 {
-    font-size: 1.5rem;
-    margin-top: 20px;
-}
-
-.assignments-section ul {
-    padding: 15px;
-}
-
-.assignments-section ul li a {
-    text-decoration: none;
-    color: var(--accent1-color);
-}
-
-.assignments-section ul li a:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-footer {
-    box-sizing: border-box;
-    background-color: var(--primary-color);
-    color: var(--accent1-color);
+    color: #fff;
     text-align: center;
-    padding: 15px;
-    min-height: 70px;
-    margin-top: auto;
-}
+    padding: 1rem;
+    text-decoration: none;
+  }
+  
+  .navigation {
+    background-color: #2c3e50;
+    color: white;
+    display: none;
+  }
+  
+  .navigation a:hover {
+    background-color: #e76f51;
+  }
+  
+  .navigation.show {
+    display: block;
+  }
+  
 
-footer a {
-    text-decoration: underline;
-    color: var(--accent1-color);
-}
+  main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  main h2 {
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+  }
+  
+  main li {
+    list-style-type: none;
+  }
+  
+  .card {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .card h3 {
+    text-align: center; 
+    color: white; 
+    background-color: #2c3e50;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 0; 
+    
+  }
+  
+  .card ul {
+    padding: 20px;
+  }
+  
+  .card p {
+    padding: 20px;
+  }
+  
+  .card li{
+    padding: 5px;
+  }
+  
+  .card a {
+    text-decoration: none; 
+    color: blue; 
+    margin: 0 5px; 
+  }
+  
+  .card a:hover {
+    text-decoration: underline; 
+  }
+  
+  .card p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
 
-footer a:hover {
-    text-decoration: underline;
-    font-weight: bold;
+  footer a {
+    color: white;
 }
+  
+  .brazil-flag {
+    vertical-align: middle; 
+    width: 30px; 
+    height: auto;
+    margin-left: 5px;
+  }
+  
+  #lastModifiedDate{
+    color: #EFCBA7;
+  }
+  
+  #darkModeToggle {
+    width: 50px;      
+    height: 50px;     
+    border-radius: 50%;   
+    background-color: #333;  
+    color: #f5f5f5;   
+    border: none;     
+    cursor: pointer; 
+    outline: none;   
+    font-size: 1.5rem;   
+    transition: background-color 0.3s ease; 
+    margin-right: 5px;
+  }
+  
+  #darkModeToggle:hover {
+    background-color: #555;  
+  }
+  
+  body.dark-mode #darkModeToggle {
+    background-color: #f5f5f5;   
+    color: #333;     
+  }
+  
+  body.dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+    
+  }
+  
+  body.dark-mode main {
+    border-color: #555;
+  }
+  
+  body.dark-mode main h2 {
+    border-color: #fff;
+  }
+  
+  body.dark-mode .card {
+    border-color: #555;
+    background-color: #444;
+    box-shadow: 0 2px 8px white;
+  }
+  
+  body.dark-mode .card a {
+   color: white;
+    
+  }
+  
+  body.dark-mode .card h3 {
+    background-color: #333;
+  }

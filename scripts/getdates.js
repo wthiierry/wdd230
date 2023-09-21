@@ -1,11 +1,9 @@
-const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let currentDate = new Date(document.lastModified);
-let result = weekdays[currentDate.getDay()] + ", " + currentDate.getDate() + " " + months[currentDate.getMonth()] + " "  + currentDate.getFullYear();
-document.getElementById('lastUpdate').innerHTML = result;
+document.addEventListener('DOMContentLoaded', function() {
+    
+  const currentYear = new Date().getFullYear();
+  document.getElementById("currentYear").textContent = currentYear;
 
-WebFont.load({
-    google: {
-      families: ['Work Sans', 'Neuto', 'Asul']
-    }
-  });
+  
+  const lastModifiedDate = document.lastModified;
+  document.getElementById("lastModifiedDate").textContent = "Last Modification: " + lastModifiedDate;
+});
