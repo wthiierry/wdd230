@@ -1,0 +1,26 @@
+@media (min-width: 768px) {
+    .navigation {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      
+    }
+  
+    nav li {
+      display: block;
+      flex: 1 1 100%;
+    }
+    
+    #menu {
+      display: none;
+    }
+  
+    .card-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    footer p, footer span {
+      display: inline-block;
+      padding: 2px;
+    }
+  }
