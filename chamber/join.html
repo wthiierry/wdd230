@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>São Paulo Chamber of Commerce Join</title>
+    <link rel="icon" href="./favicon.ico" />
+    <meta name="description" content="Wagner Thierry - WDD 230 - São Paulo Chamber of Commerce Join" />
+    <meta name="author" content="Wagner Thierry" />
+    <meta property="og:title" content="São Paulo Chamber of Commerce Join" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://wthiierry.github.io/wdd230/chamber/join.html" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/larger.css" />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <img src="./images/logo.webp" alt="Logo" id="logo" />
+        <h1 class="web-name">São Paulo Chamber of Commerce</h1>
+        <ul class="iconos">
+            <li>
+                <a href="https://www.facebook.com/" target="_blank"><img src="./images/facebook.webp"
+                        alt="facebook logo" width="32" height="32" /></a>
+            </li>
+            <li>
+                <a href="https://www.twitter.com/" target="_blank"><img src="./images/twitter.webp" alt="twitter logo"
+                        width="32" height="32" /></a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- NAV -->
+    <a id="menu" href="#" title="hamburger Menu"></a>
+    <nav>
+        <ul class="navigation">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./discover.html">Discover</a></li>
+            <li><a href="./join.html">Join</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="main-form">
+        <!-- Form -->
+        <form id="form" class="form" method="get" action="thankyou.html">
+            <fieldset>
+                <legend class="legend-form">Membership Form</legend>
+                <!-- Applicant's first name -->
+                <label class="top">First Name*<input type="text" id="firstName" name="firstName" required /></label>
+
+                <!-- Applicant's last name -->
+                <label class="top">Last Name*<input type="text" id="lastName" name="lastName" required /></label>
+
+                <!-- Applicant's title/position -->
+                <label class="top">Title/Position*<input type="text" id="position" name="position"
+                        pattern="^[a-zA-Z\s-]{7,}$"
+                        title="alpha characters, hyphens, and spaces with a minimum of 7 characters " /></label>
+
+                <!-- Email Address -->
+                <label class="top">Email*<input type="email" id="email" name="email" placeholder="someone@gmail.com"
+                        required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$"
+                        title="Please enter a valid email address" /></label>
+
+                <!-- Mobile phone number -->
+                <label class="top">Mobile Phone*<input type="tel" id="phone" name="phone" placeholder="+56"
+                        required /></label>
+
+                <!-- Business/Organization's name -->
+                <label class="top">Organization Name*<input type="text" id="businessName" name="businessName"
+                        required /></label>
+
+                <!-- Membership Level Selection -->
+
+                <label class="top">Membership Level
+                    <select id="membershipLevel" name="membershipLevel">
+                        <option value="">Please Select a membership level &#9662;</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <!-- Business/Organization's description -->
+
+                <label class="top">Organization Description<textarea id="orgDescription" name="orgDescription"
+                        oninput="checkCharacterCount(this)"></textarea>
+                </label>
+                <p id="charCount">0/150 characters</p>
+
+                <!-- Timestamp -->
+                <label class="top">
+                    <input type="hidden" id="timestamp" name="timestamp" /></label>
+
+                <label>
+                    <input id="submit" name="submit" type="submit" value="Send Membership Form"
+                        class="submitBtn" /></label>
+            </fieldset>
+        </form>
+        <!-- Membership level benefits -->
+        <div class="benefits">
+            <h3>Membership Benefits</h3>
+            <ul>
+                <li>
+                    <strong>NP Membership:</strong> For non-profit organizations. No
+                    fee.
+                </li>
+                <li>
+                    <strong>Bronze Membership:</strong> Basic events and advertising.
+                </li>
+                <li>
+                    <strong>Silver Membership:</strong> Special events, advanced
+                    training, and priority advertising.
+                </li>
+                <li>
+                    <strong>Gold Membership:</strong> Exclusive events, premium
+                    training, and spotlight advertising.
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span></p>
+        <p>Wagner Thierry</p>
+        <p>WDD 230 Project - The Chamber of Commerce Home Page</p>
+        <br />
+        <p id="lastModifiedDate">Last Modification:</p>
+    </footer>
+
+    <script src="./scripts/wordCount.js"></script>
+    <script src="./scripts/confirmationPage.js"></script>
+    <script src="./scripts/timeStamp.js"></script>
+    <script src="../scripts/getDates.js"></script>
+    <script src="../scripts/hamburgerMenu.js"></script>
+</body>
+
+</html>
