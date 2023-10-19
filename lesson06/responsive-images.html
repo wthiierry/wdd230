@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images Demonstration</title>
+    <meta name="description"
+        content="Wagner Thierry's Responsive Images assignment - WDD 230 - Web Frontend Development">
+    <meta name="author" content="Wagner Thierry">
+    <link rel="stylesheet" href="./styles/responsive-images.css">
+</head>
+
+<body>
+    <header>
+        <h1>Responsive Images</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/big-hero-large.jpg" media="(max-width: 500px)">
+                <source srcset="images/big-hero-large.jpg" media="(max-width: 1000px)">
+                <img src="images/big-hero-large.jpg" alt="hero photo" width="1500" height="750">
+            </picture>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span></p>
+        <p>Wagner Thierry</p>
+        <p id="lastModifiedDate">Last Modification:</p>
+    </footer>
+    <script src="./scripts/lazyload.js"></script>
+    <script src="../scripts/getDates.js"></script>
+</body>
+
+</html>
